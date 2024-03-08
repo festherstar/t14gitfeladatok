@@ -1,0 +1,50 @@
+body{
+    background-image: url(img/hatter.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.keret{
+    margin: auto;
+    width: 70%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.678);
+}
+h1{
+    text-align: center;
+    font-family: Stencil, Times New Roman;
+    letter-spacing: 10px;
+    text-shadow: 5px 0px 20px green;
+    color: rgb(14, 80, 20);
+    border-radius: 5px;
+    border: 5px outset white;
+    box-shadow: 5px 0px 50px green;
+    text-transform: uppercase;
+}
+.btn{
+    /*
+    background-image: linear-gradient(to right, rgb(16, 110, 44), rgb(60, 216, 81), rgb(16, 110, 44));
+    */
+
+    background-color: rgba(8, 82, 14, 0.733);
+    
+}
+a:link{
+    color: rgb(14, 80, 20);
+    text-decoration: none;
+}   
+a:hover{
+    color: rgb(14, 80, 20);
+}
+a:active{
+    color: rgb(14, 80, 20); 
+}
+a:visited{
+    color: rgb(14, 80, 20);
+}
+
+img{
+    min-width: 240px;
+    min-height: 140px;
+}

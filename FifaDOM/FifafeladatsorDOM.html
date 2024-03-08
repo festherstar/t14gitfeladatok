@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA feladatsor megoldása DOM segítségével</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="FifafeladatsorCSS.css"> 
+</head>
+
+<body>
+
+    <div class="keret">
+
+    <div class="container">
+
+        <br>
+
+        <a href="https://en.wikipedia.org/wiki/FIFA" target="_blank"><h1>Fifa</h1></a>
+
+        <br>
+
+        <img src="img/labda00.png" class="float-end" alt="00">
+
+        <br>
+
+        <!--1.feladat-->
+        <h2>Csapatok száma</h2>
+        <p id="f1"></p>
+        <button type="button" class="btn btn-dark w-100 my-3" id="f1feladat">Csapatok számának megjelenítése</button>
+
+
+        <!--2.feladat-->
+        <h2>A csapatok átlagpontszáma</h2>
+        <p id="f2"></p>
+        <button type="button" class="btn btn-dark w-100 my-3" id="f2feladat">Átlagpontszám megjelenítése</button>
+
+
+        <!--3.feladat-->
+        <h2>Átlagértéket meghaladó csapatok listája</h2>
+        <button type="button" class="btn btn-dark w-100 my-3" id="f3feladat">Átlagértéket meghaladó csapatok megjelenítése</button>
+
+        <table id="f3" class="table table-success table-striped table-bordered table-hover table-sm text-center">
+            <tr>
+                <th>Csapatok</th>
+            </tr>
+        </table>
+
+
+        <!--4.feladat-->
+        <h2>A legtöbbet javító csapat adatai</h2>
+        <button type="button" class="btn btn-dark w-100 my-3" id="f4feladat">A legtöbbet javító csapat adatainak megjelenítése</button>
+
+        <table id="f4" class="table table-success table-striped table-bordered table-hover table-sm">
+            <tr>
+                <th>Csapat neve</th>
+                <th>Csapat helyezése</th>
+                <th>Csapat pontszáma</th>
+            </tr>
+        </table>
+
+
+        <!--5.feladat-->
+        <h2>Az adott csapat szerepel-e a listán?</h2>
+        <input type="text" class="form-control" id="csapatNeve" placeholder="Csapat neve">
+        <p id="f5"></p>
+        <button type="button" class="btn btn-dark w-100 my-3" id="f5feladat">Szerepel-e a listán?</button>
+
+       
+        <!--6.feladat-->
+        <h2>Statisztika</h2>
+        <button type="button" class="btn btn-dark w-100 my-3" id="f6feladat">Statisztika megjelenítése</button>
+
+        <table id="f6" class="table table-success table-striped table-bordered table-hover table-sm">
+            <tr>
+                <th>Változás</th>
+                <th>Mennyisége</th>
+            </tr>
+        </table>
+
+        <br>
+        
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" >
+            
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/labda1.jpg" class="d-block mx-auto rounded"  alt="01">
+              </div>
+              <div class="carousel-item">
+                <img src="img/labda2.jpg" class="d-block mx-auto rounded" alt="02">
+              </div>
+              <div class="carousel-item">
+                <img src="img/labda3.jpg" class="d-block mx-auto rounded" alt="03">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <br>
+
+          
+        <script src="FifafeladatsorJS.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
