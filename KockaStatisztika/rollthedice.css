@@ -1,0 +1,31 @@
+body{
+    background-image: conic-gradient( khaki, seagreen, white, seagreen, khaki);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#igazito {
+    display: inline-flex;
+}
+
+.kocka {
+    width: 100px;
+    height: 99px;
+    background-image: none;
+}
+
+.btn-primary{
+    max-width: 800px;
+    background-image: linear-gradient(to right, darkgreen, khaki, white, khaki, darkgreen);
+    color: seagreen;
+    border: none;
+}
+
+.btn-primary:hover{
+    background-image: linear-gradient(to right, firebrick, khaki, white, khaki, firebrick);
+    color: seagreen;
+    border: none;
+    box-shadow: 0px 5px 30px white;
+    text-transform: uppercase;
+}
