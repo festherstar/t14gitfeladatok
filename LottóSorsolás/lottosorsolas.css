@@ -1,0 +1,117 @@
+body{
+    background: #360033; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #360033, #0b8793); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #360033, #0b8793); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.navbar{
+    float: left;
+    background-color: rgba(0, 0, 0, 0.151);
+    font-family: Times New Roman;
+    font-size: x-large;
+    font-weight: bold;
+    font-variant: small-caps;
+    border-top-left-radius: 500px;
+    border-bottom-right-radius: 500px;
+    border-right: 5px solid lightseagreen;
+    border-bottom: 5px solid lightseagreen;
+    box-shadow: 10px 5px 100px darkturquoise;
+}
+
+.navbar-toggler{
+    background-color: teal;
+    border: 3px solid lightseagreen;
+}
+
+li{
+    text-align: center;
+    border-bottom: 1px solid indigo;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 250px;
+}
+
+li:hover{
+    font-size: 130%;
+}
+
+nav{
+    text-shadow: 5px 5px 7px black;
+}
+
+#keret{
+    color: rgb(255, 255, 255);
+    float: right;
+}
+
+span{
+    letter-spacing: 6px;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-variant: small-caps;
+    letter-spacing: 5px;
+    color: white;
+    background-color: lightseagreen;
+    border: 10px solid darkcyan;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    box-shadow: 5px 5px 10px darkturquoise;
+    padding: 10px;
+}
+
+p1{
+    color: gold;
+}
+p2{
+    color: orange;
+}
+p4{
+    text-shadow: 10px 10px 30px lime;
+}
+p5{
+    text-shadow: 10px 10px 30px red;
+}
+p6{
+    text-shadow: 10px 10px 30px blue;
+}
+p7{
+    text-shadow: 10px 10px 30px yellow; 
+}
+p8{
+    text-shadow: 5px 5px 10px deepskyblue; 
+}
+p9{
+    text-shadow: 5px 5px 10px violet;  
+}
+p11{
+    text-shadow: 5px 5px 10px royalblue;
+}
+
+.btn-secondary{
+    background-image: linear-gradient(to right, lightseagreen, indigo, lightseagreen);
+    border: none;
+}
+.btn-secondary:hover{
+    background-image: linear-gradient(to right, indigo, lightseagreen, indigo);
+    box-shadow: 0px 0px 35px darkturquoise;
+}
+
+.golyo{
+    width: 45px;
+    height: 45px;
+    border-radius: 25px;
+    background-color: whitesmoke;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    border: 3px solid lightseagreen;
+    box-shadow: 5px 5px 7px black;
+}

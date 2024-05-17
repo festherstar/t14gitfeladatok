@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottószám generátor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="lottosorsolas.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav flex-column min-vh-100">
+              <li class="nav-item">
+                <span><a class="nav-link active" aria-current="page" href="#"  id="g0" style="color:white">Főoldal</a></span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"  id="g1" style="color:white"><p4><p1>Ötös</p1>lottó</p4></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"  id="g2" style="color:white"><p5><p1>Hatos</p1>lottó</p5></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"  id="g3" style="color:white"><p6><p1>Skandináv</p1> lottó</p6></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"  id="g4" style="color:white"><p7></p6><p1>Eurojackpot</p1></p6><p7></p7></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"  id="g5" style="color: white"><p8>K</p8><p9>e</p9><p8>n</p8><p9>ó</p9></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"  id="g6" style="color: white"><p11>Puttó</p11></a>
+              </li>
+        </div>
+      </nav>
+
+<!--FELADATOKAT MEGJELENÍTŐ BLOKKOK-->
+
+<div id="keret" class="col-10 min-vh-100 text-center">
+        <h1>Szerencsejáték</h1>
+      <br>
+
+<!--0. blokk-->      
+<div class="container">
+ <div id="feladatBlokk00">
+    <h2>Játékleírás</h2>
+
+    <h3>Ötöslottó</h3>
+    <p>Az Ötöslottó játékban 90 számból kell 5 számot kiválasztani.</p> 
+
+    <h3>Hatoslottó</h3>
+    <p>A Hatoslottó játékban 45 számból kell 6 számot kiválasztani.</p>
+    
+    <h3>Skandináv</h3>
+    <p>A Skandináv lottó játékban 35 számból kell 7 számot kiválasztani.</p>
+    
+    <h3>Eurojackpot</h3>
+    <p>Az Eurojackpot játékban az „A” mezőn 50 számból 5 számot, a „B” mezőn pedig 12 számból 2 számot kell kiválasztani.</p>
+    
+    <h3>Kenó</h3>
+    <p>A Kenó játékban 80 számból maximum 10 számot lehet kiválasztani. A cél az, hogy minél több számot eltalálj a 20 nyerőszám közül.</p>
+
+    <h3>Puttó</h3>
+    <p>A Puttó játékban az „A” mezőn 20 számból 8 számot, a „B” mezőn pedig 4 számból 1 számot kell kiválasztani.</p>
+
+    <h2>Útmutató</h2>
+    <p>A kiválasztott számokat vesszővel elválasztva írja be az adott mezőbe! Ne használjon szóközöket! Csak annyi számot gépeljen be, amennyire valóban szükség van! Abban az esetben, ha a gép több azonos számot sorsolt ki, sorsoljon újra! Figyelem! A statisztika figyelembe vesz minden kisorsolt számot attól függetlenül, hogy újra volt-e sorsolva.</p>
+ </div>
+</div>      
+
+<!--1. blokk-->
+<div class="container">
+    <div id="feladatBlokk01">
+        <h2>Ötöslottó</h2>
+          <h3 id="f1"></h3>
+
+        <div>
+            <div id="golyo1"></div>
+            <div id="golyo2"></div>
+            <div id="golyo3"></div>
+            <div id="golyo4"></div>
+            <div id="golyo5"></div>
+        </div>
+
+            <button type="button" id="generalogomb1" class="btn btn-secondary w-100 my-3">Sorsolás</button>
+            <table class="table  table-striped table-info table-bordered table-hover table-sm">
+                <caption>Sorsolás - Statisztika</caption>
+                <thead>
+                    <tr>
+                        <th>Tulajdonság</th>
+                        <th>Statisztika eredménye</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hányszor húzták ki az adott számot?</td>
+                        <td id="hanyszor">0</td>
+                    </tr>
+                    <tr>
+                        <td>Melyik volt a legritkábban előforduló szám?</td>
+                        <td id="legritkabb">0</td>
+                    </tr>
+                    <tr>
+                        <td>Melyik volt a leggyakrabban előforduló szám?</td>
+                        <td id="leggyakrabb">0</td>
+                    </tr>
+                    <tr>
+                      <td>Legkevesebbszer előforduló szám (máshogyan)</td>
+                      <td id="legkevesebbszerelofordulomashogy">0</td>
+                    </tr>
+                    <tr>
+                      <td>Legtöbbször előforduló szám (máshogyan)</td>
+                      <td id="legtobbszorelofordulomashogy">0</td>
+                    </tr>
+                    <tr>
+                        <td>Melyik volt a legkisebb szám?</td>
+                        <td id="legkisebb">0</td>
+                    </tr>
+                    <tr>
+                        <td>Melyik volt a legnagyobb szám?</td>
+                        <td id="legnagyobb">0</td>
+                    </tr>
+                    <tr>
+                        <td>Mennyi a legkisebb és a legnagyobb közötti különbség?</td>
+                        <td id="kulonbseg">0</td>
+                    </tr>
+                    <tr>
+                        <td>Melyik volt a legkisebb szám aktuálisan?</td>
+                        <td id="aktualisanlegkisebb">0</td>
+                    </tr>
+                    <tr>
+                        <td>Melyik volt a legnagyobb szám aktuálisan?</td>
+                        <td id="aktualisanlegnagyobb">0</td>
+                    </tr>
+                    <tr>
+                        <td>Mennyi a legkisebb (aktuális) szám és legnagyobb (aktuális) szám közötti különbség?</td>
+                        <td id="aktualisankulonbseg">0</td>
+                    </tr>
+                    <tr>
+                        <td>Sorsolások mennyisége</td>
+                        <td id="sorsolasmennyiseg">0</td>
+                    </tr>
+                    <tr>
+                        <td>Találatszámláló</td>
+                        <td id="talalatszamlalo">0</td>
+                    </tr>
+                    <tr>
+                      <td>Találatszámláló (egészben)</td>
+                      <td id="talalatszamlaloosszesben">0</td>
+                  </tr>
+                    <tr>
+                        <td>Kihúzott utolsó számok</td>
+                        <td id="kihuzottutolsoszamok">0</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <div class="form-floating" my-3>
+              <input type="text" id="otoslottoTipp" class="form-control" placeholder="Írja be a megtippelt számokat vesszővel elválasztva!">
+              <label for="otoslottoTipp" style="color:black">Írja be a megtippelt számokat vesszővel elválasztva!</label>
+            </div>
+            <br>
+    </div>
+
+
+</div>
+
+<!--2. blokk-->
+<div class="container">
+    <div id="feladatBlokk02">
+        <h2>Hatoslottó</h2>
+          <h3 id="f2"></h3>
+            
+          <div>
+            <div id="golyo6"></div>
+            <div id="golyo7"></div>
+            <div id="golyo8"></div>
+            <div id="golyo9"></div>
+            <div id="golyo10"></div>
+            <div id="golyo11"></div>
+          </div>
+
+            <button type="button" id="generalogomb2" class="btn btn-secondary w-100 my-3">Sorsolás</button>
+            <table class="table  table-striped table-info table-bordered table-hover table-sm">
+                <thead>
+                    <tr>
+                        <th>Találatszámláló</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="hatostalalatszamlalo">0</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="form-floating" my-3>
+              <input type="text" id="hatoslottoTipp" class="form-control" placeholder="Írja be a megtippelt számokat vesszővel elválasztva!">
+              <label for="hatoslottoTipp" style="color:black">Írja be a megtippelt számokat vesszővel elválasztva!</label>
+            </div>
+            <br>
+    </div>
+</div>
+
+
+<!--3. blokk-->
+<div class="container">
+    <div id="feladatBlokk03">
+        <h2>Skandináv lottó</h2>
+          <h3 id="f3"></h3>
+          <div>
+            <div id="golyo12"></div>
+            <div id="golyo13"></div>
+            <div id="golyo14"></div>
+            <div id="golyo15"></div>
+            <div id="golyo16"></div>
+            <div id="golyo17"></div>
+            <div id="golyo18"></div>
+          </div>
+
+            <button type="button" id="generalogomb3" class="btn btn-secondary w-100 my-3">Sorsolás</button>
+            <table class="table  table-striped table-info table-bordered table-hover table-sm">
+                <thead>
+                    <tr>
+                        <th>Találatszámláló</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="skandinavtalalatszamlalo">0</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="form-floating" my-3>
+              <input type="text" id="skandinavlottoTipp" class="form-control" placeholder="Írja be a megtippelt számokat vesszővel elválasztva!">
+              <label for="skandinavlottoTipp" style="color:black">Írja be a megtippelt számokat vesszővel elválasztva!</label>
+            </div>
+            <br>
+    </div>
+</div>
+
+<!--4. blokk-->
+<div class="container">
+    <div id="feladatBlokk04">
+        <h2>Eurojackpot</h2>
+         <h2>A mező</h2>
+          <h3 id="f4a"></h3>
+          <div>
+            <div id="golyo19"></div>
+            <div id="golyo20"></div>
+            <div id="golyo21"></div>
+            <div id="golyo22"></div>
+            <div id="golyo23"></div>
+          </div>
+
+            <button type="button" id="generalogomb4a" class="btn btn-secondary w-100 my-3">Sorsolás</button>
+            <table class="table  table-striped table-info table-bordered table-hover table-sm">
+                <thead>
+                    <tr>
+                        <th>Találatszámláló</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="eurojackpotatalalatszamlalo">0</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="form-floating" my-3>
+              <input type="text" id="eurojackpotalottoTipp" class="form-control" placeholder="Írja be a megtippelt számokat vesszővel elválasztva!">
+              <label for="eurojackpotalottoTipp" style="color:black">Írja be a megtippelt számokat vesszővel elválasztva!</label>
+            </div>
+            <br>
+        <h2>Eurojackpot</h2>
+         <h2>B mező</h2>  
+         <h3 id="f4b"></h3>
+         <div>
+           <div id="golyo24"></div>
+           <div id="golyo25"></div>
+       </div>
+
+           <button type="button" id="generalogomb4b" class="btn btn-secondary w-100 my-3">Sorsolás</button>
+           <table class="table  table-striped table-info table-bordered table-hover table-sm">
+               <thead>
+                   <tr>
+                       <th>Találatszámláló</th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr>
+                       <td id="eurojackpotbtalalatszamlalo">0</td>
+                   </tr>
+               </tbody>
+           </table>
+
+           <div class="form-floating" my-3>
+             <input type="text" id="eurojackpotblottoTipp" class="form-control" placeholder="Írja be a megtippelt számokat vesszővel elválasztva!">
+             <label for="eurojackpotblottoTipp" style="color:black">Írja be a megtippelt számokat vesszővel elválasztva!</label>
+           </div>
+           <br>
+    </div>
+</div>
+
+<!--5. blokk-->
+<div class="container">
+    <div id="feladatBlokk05">
+        <h2>Kenó</h2>
+          <h3 id="f5"></h3>
+        <div>
+          <div id="golyo26"></div>
+          <div id="golyo27"></div>
+          <div id="golyo28"></div>
+          <div id="golyo29"></div>
+          <div id="golyo30"></div>
+          <div id="golyo31"></div>
+          <div id="golyo32"></div>
+          <div id="golyo33"></div>
+          <div id="golyo34"></div>
+          <div id="golyo35"></div>
+          <div id="golyo36"></div>
+          <div id="golyo37"></div>
+          <div id="golyo38"></div>
+          <div id="golyo39"></div>
+          <div id="golyo40"></div>
+          <div id="golyo41"></div>
+          <div id="golyo42"></div>
+          <div id="golyo43"></div>
+          <div id="golyo44"></div>
+          <div id="golyo45"></div>
+        </div>
+
+          <button type="button" id="generalogomb5" class="btn btn-secondary w-100 my-3">Sorsolás</button>
+          <table class="table  table-striped table-info table-bordered table-hover table-sm">
+              <thead>
+                  <tr>
+                      <th>Találatszámláló</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td id="kenotalalatszamlalo">0</td>
+                  </tr>
+              </tbody>
+          </table>
+
+          <div class="form-floating" my-3>
+            <input type="text" id="kenolottoTipp" class="form-control" placeholder="Írja be a megtippelt számokat vesszővel elválasztva!">
+            <label for="kenolottoTipp" style="color:black">Írja be a megtippelt számokat vesszővel elválasztva!</label>
+          </div>
+          <br>
+    </div>
+</div>
+
+<!--6. blokk-->
+<div class="container">
+    <div id="feladatBlokk06">
+        <h2>Puttó</h2>
+        <h2>A mező</h2>
+         <h3 id="f6a"></h3>
+        <div>
+          <div id="golyo46"></div>
+          <div id="golyo47"></div>
+          <div id="golyo48"></div>
+          <div id="golyo49"></div>
+          <div id="golyo50"></div>
+          <div id="golyo51"></div>
+          <div id="golyo52"></div>
+          <div id="golyo53"></div>
+        </div>
+
+          <button type="button" id="generalogomb6a" class="btn btn-secondary w-100 my-3">Sorsolás</button>
+          <table class="table  table-striped table-info table-bordered table-hover table-sm">
+              <thead>
+                  <tr>
+                      <th>Találatszámláló</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td id="puttoatalalatszamlalo">0</td>
+                  </tr>
+              </tbody>
+          </table>
+
+          <div class="form-floating" my-3>
+            <input type="text" id="puttoalottoTipp" class="form-control" placeholder="Írja be a megtippelt számokat vesszővel elválasztva!">
+            <label for="puttoalottoTipp" style="color:black">Írja be a megtippelt számokat vesszővel elválasztva!</label>
+          </div>
+          <br>
+       <h2>Puttó</h2>
+        <h2>B mező</h2>  
+         <h3 id="f6b"></h3> 
+         <div>
+          <div id="golyo54"></div>
+        </div>
+
+          <button type="button" id="generalogomb6b" class="btn btn-secondary w-100 my-3">Sorsolás</button>
+          <table class="table  table-striped table-info table-bordered table-hover table-sm">
+              <thead>
+                  <tr>
+                      <th>Találatszámláló</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td id="puttobtalalatszamlalo">0</td>
+                  </tr>
+              </tbody>
+          </table>
+
+          <div class="form-floating" my-3>
+            <input type="text" id="puttoblottoTipp" class="form-control" placeholder="Írja be a megtippelt számot!">
+            <label for="puttoblottoTipp" style="color:black">Írja be a megtippelt számot!</label>
+          </div>
+          <br>
+    </div>
+</div>
+
+
+</div>
+
+ 
+    <script src="lottosorsolas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>
